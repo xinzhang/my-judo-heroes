@@ -1,0 +1,42 @@
+// src/components/Medal.js
+import React from 'react';
+
+// const typeMap = {
+//   'G': 'Gold',
+//   'S': 'Silver',
+//   'B': 'Bronze'
+// };
+//
+// export default class Medal extends React.Component {
+//   render() {
+//     return (
+//     );
+//     <li className="medal">
+//     <span className={`symbol symbol-${this.props.type}`} title={typeMap[this.props.type]}>{this.props.type}</span>
+//     <span className="year">{this.props.year}</span>
+//     <span className="city"> {this.props.city}</span>
+//     <span className="event"> ({this.props.event})</span>
+//     <span className="category"> {this.props.category}</span>
+//     </li>
+//   }
+// }
+
+export const medalTypes = {
+  G: 'Gold',
+  S: 'Silver',
+  B: 'Bronze',
+};
+
+export const Medal = (props) => {
+  return (
+    <li className="medal">
+      <span className={`symbol symbol-${props.type}`} title={medalTypes[props.type]}>{props.type}</span>
+      <span className="year">{props.year}</span>
+      <span className="city"> {props.city}</span>
+      <span className="event"> ({props.event})</span>
+      <span className="category"> {props.category}</span>
+    </li>
+  )
+}
+
+export default Medal
